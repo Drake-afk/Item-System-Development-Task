@@ -70,6 +70,7 @@ public class ItemSystemTask {
 						
 					case ("N"):
 						System.out.println();
+						scanObj.close();
 						return;
 					default:
 						
@@ -77,12 +78,14 @@ public class ItemSystemTask {
 				}
 				else {
 					System.out.println("You don't have sufficient items to upgrade current item");
+					scanObj.close();
 					return;
 				}
 				
 			} else {
 				System.out.println("There are no such items!");
 				System.out.println();
+				scanObj.close();
 				return;
 			}
 			
@@ -108,7 +111,7 @@ public class ItemSystemTask {
 			inventory.ShowInventory();
 		default:
 		}
-		
+		scanObj.close();
 		//Commands : Upgrade, Add, Show
 	}
 	
